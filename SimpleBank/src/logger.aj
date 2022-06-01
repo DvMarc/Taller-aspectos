@@ -17,6 +17,7 @@ public aspect logger {
         try {
         	FileWriter data = new FileWriter(file.getPath(), true);
         	try {
+        		cal.getInstance();
 				data.write("**** Transaction Complete **** "+ cal.getTime()+"\n");
 			} catch (Exception e) {
 				e.printStackTrace();
@@ -33,6 +34,7 @@ public aspect logger {
         try {
         	FileWriter data = new FileWriter(file.getPath(), true);
         	try {
+        		cal.getInstance();
 				data.write("**** Withdraw Complete **** "+ cal.getTime()+"\n");
 			} catch (Exception e) {
 				e.printStackTrace();
