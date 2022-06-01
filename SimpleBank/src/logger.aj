@@ -17,8 +17,7 @@ public aspect logger {
         try {
         	FileWriter data = new FileWriter(file.getPath(), true);
         	try {
-        		cal.getInstance();
-				data.write("**** Transaction Complete **** "+ cal.getTime()+"\n");
+				data.write("**** Transaction Complete **** "+ Calendar.getInstance().getTime()+"\n");
 			} catch (Exception e) {
 				e.printStackTrace();
 			}
@@ -26,7 +25,7 @@ public aspect logger {
         }catch(IOException e){
         	e.printStackTrace();
         }
-    	System.out.println("**** Transaction Complete **** "+ cal.getTime());
+    	System.out.println("**** Transaction Complete **** "+ Calendar.getInstance().getTime());
     }
     
     pointcut withdraw() : call(* moneyWith*(..));
@@ -34,8 +33,7 @@ public aspect logger {
         try {
         	FileWriter data = new FileWriter(file.getPath(), true);
         	try {
-        		cal.getInstance();
-				data.write("**** Withdraw Complete **** "+ cal.getTime()+"\n");
+				data.write("**** Withdraw Complete **** "+ Calendar.getInstance().getTime()+"\n");
 			} catch (Exception e) {
 				e.printStackTrace();
 			}
@@ -43,6 +41,6 @@ public aspect logger {
         }catch(IOException e){
         	e.printStackTrace();
         }
-    	System.out.println("**** Withdraw Complete **** "+ cal.getTime());
+    	System.out.println("**** Withdraw Complete **** "+ Calendar.getInstance().getTime());
     }
 }
