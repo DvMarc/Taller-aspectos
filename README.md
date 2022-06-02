@@ -13,3 +13,8 @@ Aspecto de transacciones
 
 
 ![image](https://user-images.githubusercontent.com/85300106/171451545-551d483c-8a5a-47a1-9ff8-06a9327e3a51.png)
+
+Chang Meiyin
+Maldonado Gabriel
+Marcillo Rommel
+Martinez Diego
